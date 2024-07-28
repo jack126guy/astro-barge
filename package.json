@@ -1,15 +1,13 @@
 {
 	"name": "astro-barge",
+	"private": true,
 	"version": "0.0.0",
-	"main": "index.js",
+	"type": "module",
 	"scripts": {
 		"format": "prettier --write .",
 		"barge-app:build": "rollup --config src/barge-app/rollup.config.ts --configPlugin typescript --input src/barge-app/index.tsx --file src/components/barge-app.bundle.cljs",
 		"dev": "astro dev"
 	},
-	"author": "",
-	"license": "MIT",
-	"description": "",
 	"devDependencies": {
 		"@babel/preset-env": "^7.25.0",
 		"@halfgray/vite-plugin-classic-js": "^0.1.2",
