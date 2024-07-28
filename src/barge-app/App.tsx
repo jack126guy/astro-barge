@@ -1,7 +1,8 @@
 import { h, Component } from 'preact';
 
 export class App extends Component<{}, { userName: string }> {
-	render({}, { userName }) {
+	render() {
+		const { userName } = this.state;
 		const text = userName ? `Hello, ${userName}!` : 'Hello!';
 		return (
 			<div>
