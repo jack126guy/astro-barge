@@ -9,7 +9,7 @@ export default defineConfig({
 	},
 	plugins: [
 		typescript(),
-		nodeResolve(),
+		nodeResolve({ browser: true }),
 		babel({
 			babelHelpers: 'bundled',
 			extensions: ['.ts', '.tsx', '.js', '.jsx'],
