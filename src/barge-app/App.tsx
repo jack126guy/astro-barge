@@ -11,16 +11,13 @@ export class App extends Component<{}, { userName: string }> {
 					<input
 						type="text"
 						value={userName}
-						onInput={this.updateName.bind(this)}
+						onInput={(e) => this.updateName(e)}
 					/>
 				</label>
 				<p>{text}</p>
 			</div>
 		);
 	}
-	// Don't make this an arrow function because the generated code
-	// would trigger a polyfill for Array.prototype.concat.
-	// You must use .bind(this) when passing this function as an event handler.
 	updateName(e: Event) {
 		this.setState({ userName: (e.target as HTMLInputElement).value });
 	}
