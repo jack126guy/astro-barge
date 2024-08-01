@@ -32,7 +32,7 @@ export default defineConfig({
 
 function banCoreJs(): Plugin {
 	return {
-		name: 'rollup-plugin-ban-core-js',
+		name: 'ban-core-js',
 		resolveId(source) {
 			if (source === 'core-js' || source.startsWith('core-js/')) {
 				throw new Error(`core-js import detected: ${source}`);
