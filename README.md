@@ -13,7 +13,7 @@ The two main goals are:
 
 The component is written using [Preact 8](https://preactjs.com/guide/v8/getting-started/) to support Internet Explorer 9. The code is bundled with [Rollup](https://rollupjs.org/) and transpiled with [@babel/preset-env](https://babeljs.io/docs/babel-preset-env). The bundled code is introduced into the site using [vite-plugin-classic-js](https://github.com/jack126guy/vite-plugin-classic-js).
 
-To avoid increasing the bundle size, the code is written to avoid requiring polyfills. This is enforced by a custom Rollup plugin that errors whenever a core-js module is imported.
+To avoid increasing the bundle size, the code is written to avoid requiring polyfills. This is enforced by a custom Rollup plugin that errors whenever a core-js module is imported. (Note, however, that this is not perfect. For example, async/await is transpiled to promises, but the Promise polyfill is not always imported in this situation.)
 
 ## License
 
