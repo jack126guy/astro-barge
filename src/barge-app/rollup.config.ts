@@ -25,6 +25,13 @@ export default defineConfig({
 					},
 				],
 			],
+			assumptions: {
+				constantSuper: true,
+				noClassCalls: true,
+				noDocumentAll: true,
+				noNewArrows: true,
+				superIsCallableConstructor: true,
+			},
 		}),
 		banCoreJs(),
 	],
